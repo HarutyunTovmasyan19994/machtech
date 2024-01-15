@@ -1,0 +1,16 @@
+.commonBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 1830px;
+    height: 3630px;
+    background-color: #e3e3e3;
+    padding: 10px;
+    overflow-x: hidden;
+}
+.boxes{
+    border: 1px solid #e3e3e3;
+
+}
