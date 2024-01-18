@@ -4,21 +4,27 @@ import "./style.css"
 
 const Boxs = () => {
     const {cup} = useSelector(user => user.state)
+    console.log(cup)
     return (
         <div className="commonBox">
             <div className="box">
                 {
                     cup.map(item => (
-                        <div
-                            style={{
-                                width: item.width + "px",
-                                height: +item.height + "px",
-                                backgroundColor: "indianred"
-                            }}
-                            className="boxes"
-                        >
+                        [...Array(parseInt(item.quantity)).keys()].map((e) =>{
 
-                        </div>
+                            return    <div
+                                key={item.id+e}
+                                style={{
+                                    width: item.width + "px",
+                                    height: +item.height + "px",
+                                    backgroundColor: "indianred"
+                                }}
+                                className="boxes"
+                            >
+
+                            </div>
+                        })
+
                     ))
                 }
             </div>

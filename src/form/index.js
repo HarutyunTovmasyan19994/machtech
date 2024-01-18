@@ -29,6 +29,7 @@ const Form = () => {
                                             <tr>
                                                 <th>Width</th>
                                                 <th>Height</th>
+                                                <th>Quantity</th>
                                             </tr>
                                             {
                                                 cup.map(item => (
@@ -43,6 +44,7 @@ const Form = () => {
                                                         <tr>
                                                             <td>{item.width}</td>
                                                             <td>{item.height}</td>
+                                                            <td>{item.quantity}</td>
                                                             <td>56546</td>
                                                             <td>
                                                                 <button className="btnEdit"
@@ -69,9 +71,9 @@ const Form = () => {
                 </div>
                 <div className="form">
                     <form>
-                        <input type="text" placeholder="Width" name="width" onChange={(e) => formHandle(e)}/>
-                        <input type="text" placeholder="Height" name="height" onChange={(e) => formHandle(e)}/>
-                        <input type="text" placeholder="Quantity"/>
+                        <input type="number" placeholder="Width" name="width" onChange={(e) => formHandle(e)}/>
+                        <input type="number" placeholder="Height" name="height" onChange={(e) => formHandle(e)}/>
+                        <input type="number" placeholder="Quantity" name="quantity"  onChange={(e) => formHandle(e)}/>
                         <input type="submit" className="btn" onClick={sendHandle} placeholder="SEND"/>
                     </form>
                 </div>

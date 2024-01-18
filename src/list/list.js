@@ -27,10 +27,13 @@ function Edit({square, formHandle, cup,setSquare,EditeBox}) {
     return (
         <tr>
             <td>
-                <input type="text" name="width" value={square.width} onChange={formHandle}/>
+                <input type="number" name="width" value={square.width} onChange={formHandle}/>
             </td>
             <td>
-                <input type="text" name="height" value={square.height} onChange={formHandle}/>
+                <input type="number" name="height" value={square.height} onChange={formHandle}/>
+            </td>
+            <td>
+                <input type="text" name='quantity' value={square.quantity} onChange={formHandle}/>
             </td>
             <td>
                 <button type="submit" onClick={DispatchFunction}>Update</button>
